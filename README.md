@@ -14,7 +14,7 @@ If you prefer to get the payment gateway up and running as a docker image, you m
 You can now access the gateway on: `http://localhost:8080/swagger`: *Please note* You must include `/swagger` else you will get the generic page, that the resource can not be found.
 
 ## Enable logging
-This service is prepared to be used with the logging provider `Seq`. In the config file you can change the location of the SeQ provider. If you are interested in running Seq as a local service use a docker image:
+This service is prepared to be used with the logging provider `Seq` [https://datalust.co/seq](Seq). In the config file you can change the location of the `Seq` provider. If you are interested in running Seq as a local service use a docker image:
 
     docker run --name seq -d --restart unless-stopped -e ACCEPT_EULA=Y -p 8080:80 -p 5341:5341 datalust/seq:latest
     
