@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using PSU_PaymentGateway.Models;
 using PSU_PaymentGateway.Repository;
 using PSU_PaymentGateway.Services;
+using Serilog;
 using System;
 using System.Threading.Tasks;
 
@@ -15,10 +17,12 @@ namespace PSU_PaymentGateway.Controllers
     {
         private IMemoryRepository transactionRepository;
         private IThrottleService throttleService;        
-        public PaymentController(IMemoryRepository transactionRepository, IThrottleService throttleService)
+        private ILogger<PaymentController> logger;
+        public PaymentController(IMemoryRepository transactionRepository, IThrottleService throttleService, ILogger<PaymentController> logger)
         {
             this.throttleService = throttleService;
-            this.transactionRepository = transactionRepository;            
+            this.transactionRepository = transactionRepository;
+            this.logger = logger;
         }
 
         [HttpPost]
@@ -47,6 +51,7 @@ namespace PSU_PaymentGateway.Controllers
             }
             else
             {
+                logger.LogWarning("Unable to create new Payment object with the following error: {error}", new {error=paymentResult.Error});
                 return Result.Fail<Transaction>(paymentResult.Error);
             }
         }

@@ -1,10 +1,11 @@
 ﻿using EnsureThat;
+using Microsoft.Extensions.Logging;
 using System;
 
 namespace PSU_PaymentGateway.Models
 {
     public class Transaction
-    {
+    {        
         private Transaction(int amount, Payment payment)
         {
             Amount = amount;
