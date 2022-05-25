@@ -9,6 +9,7 @@ namespace PSU_PaymentGateway.Models
         {
             Amount = amount;
             Payment = payment;
+            TransactionId = Guid.NewGuid();
             Created = DateTime.UtcNow;
         }
         static Transaction() { }
@@ -28,5 +29,6 @@ namespace PSU_PaymentGateway.Models
         public DateTime Created { get; private set; }
         public int Amount { get; private set; }
         public Payment Payment { get; private set; }
+        public Guid TransactionId { get; private set; }
     }
 }

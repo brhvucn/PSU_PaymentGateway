@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using EnsureThat;
+using Microsoft.Extensions.Configuration;
 using System;
 
 namespace PSU_PaymentGateway.Services
@@ -9,6 +10,8 @@ namespace PSU_PaymentGateway.Services
         private long lastRequestms = 0L; //the last request
         public ThrottleService(IConfiguration configuration)
         {
+            int tmpLimit = configuration.GetValue<int>("Settings:Limit");
+            Ensure.That(tmpLimit, nameof(tmpLimit)).IsGte<int>(0);
             this.Limit = configuration.GetValue<int>("Settings:Limit");
         }
         public bool CanExecute()

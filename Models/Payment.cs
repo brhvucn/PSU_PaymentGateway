@@ -16,6 +16,7 @@ namespace PSU_PaymentGateway.Models
         {
             Ensure.That(cardnumber, nameof(cardnumber)).IsNotNullOrEmpty();
             Ensure.That(expirationDate, nameof(expirationDate)).IsNotNullOrEmpty();
+            Ensure.That(expirationDate, nameof(expirationDate)).Matches(@"[0-9]{2}\/[0-9]{2}"); //regex matches 05/12 etc
             Ensure.That(cvc, nameof(cvc)).IsGte(100);
             Ensure.That(cvc, nameof(cvc)).IsLt(1000);
             //set the properties
