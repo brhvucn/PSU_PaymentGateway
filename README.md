@@ -10,3 +10,5 @@ There are some limitations on this implementation. The first is the throttling, 
 If you prefer to get the payment gateway up and running as a docker image, you may access it on `hub.docker.com` or run it directly with this command.
 
     docker run -d -p 8080:80 brhv/psupaymentgateway:latest
+    
+You can now access the gateway on: `http://localhost:8080/swagger`: *Please note* You must include `/swagger` else you will get the generic page, that the resource can not be found.
