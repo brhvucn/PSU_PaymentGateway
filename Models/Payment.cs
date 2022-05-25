@@ -1,4 +1,5 @@
 ﻿using EnsureThat;
+using System;
 
 namespace PSU_PaymentGateway.Models
 {
@@ -7,9 +8,16 @@ namespace PSU_PaymentGateway.Models
     /// </summary>
     public class Payment
     {
-        public static Payment Create(string cardnumber, string expirationDate, int cvc)
+        public static Result<Payment> Create(string cardnumber, string expirationDate, int cvc)
         {
-            return new Payment(cardnumber, expirationDate, cvc);
+            try
+            {
+                return Result.Ok<Payment>(new Payment(cardnumber, expirationDate, cvc));
+            }
+            catch (Exception e)
+            {
+                return Result.Fail<Payment>(e.Message);
+            }
         }
 
         private Payment(string cardnumber, string expirationDate, int cvc)

@@ -14,8 +14,7 @@ namespace PSU_PaymentGateway.Controllers
     public class PaymentController : ControllerBase
     {
         private IMemoryRepository transactionRepository;
-        private IThrottleService throttleService;
-        private int Limit = 0; //the limit for throttling, this is in ms.
+        private IThrottleService throttleService;        
         public PaymentController(IMemoryRepository transactionRepository, IThrottleService throttleService)
         {
             this.throttleService = throttleService;
@@ -32,17 +31,24 @@ namespace PSU_PaymentGateway.Controllers
                 return Result.Fail<Transaction>("The Payment service is not ready");
             }
             //simulate process
-            Payment payment = Payment.Create(request.CardNumber, request.ExpirationDate, request.CVC);
-            Result<Transaction> transactionResult = Transaction.Create(request.Amount, payment);
-            if (transactionResult.IsSuccess)
+            Result<Payment> paymentResult = Payment.Create(request.CardNumber, request.ExpirationDate, request.CVC);
+            if (paymentResult.IsSuccess)
             {
-                Result result = this.transactionRepository.AddTransaction(transactionResult.Value);
-                if (result.IsFailure)
+                Result<Transaction> transactionResult = Transaction.Create(request.Amount, paymentResult.Value);
+                if (transactionResult.IsSuccess)
                 {
-                    return Result.Fail<Transaction>(result.Error);
+                    Result result = this.transactionRepository.AddTransaction(transactionResult.Value);
+                    if (result.IsFailure)
+                    {
+                        return Result.Fail<Transaction>(result.Error);
+                    }
                 }
+                return transactionResult;
             }
-            return transactionResult;
+            else
+            {
+                return Result.Fail<Transaction>(paymentResult.Error);
+            }
         }
     }
 }
