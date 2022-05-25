@@ -18,4 +18,4 @@ This service is prepared to be used with the logging provider `Seq` [External li
 
     docker run --name seq -d --restart unless-stopped -e ACCEPT_EULA=Y -p 8080:80 -p 5341:5341 datalust/seq:latest
     
-Please note that if the gateway is not on the same network as the Seq server then they cannot communicate (typically when the payment gateway is runnin in Docker). To see the logs navigate to: `http://localhost:8080`.
+Please note that if the gateway is not on the same network as the Seq server then they cannot communicate (typically when the payment gateway is running in Docker). To see the logs navigate to: `http://localhost:8080`.
