@@ -33,8 +33,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\PSU_PaymentGateway.csproj": {
-                "projectPath": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\PSU_PaymentGateway.csproj"
+              "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\Webshop.Payment.Api.csproj": {
+                "projectPath": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\Webshop.Payment.Api.csproj"
               }
             }
           }
@@ -101,12 +101,12 @@
         }
       }
     },
-    "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\PSU_PaymentGateway.csproj": {
+    "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\Webshop.Payment.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\PSU_PaymentGateway.csproj",
-        "projectName": "PSU_PaymentGateway",
-        "projectPath": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\PSU_PaymentGateway.csproj",
+        "projectUniqueName": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\Webshop.Payment.Api.csproj",
+        "projectName": "Webshop.Payment.Api",
+        "projectPath": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\Webshop.Payment.Api.csproj",
         "packagesPath": "C:\\Users\\brhv\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\obj\\",
         "projectStyle": "PackageReference",

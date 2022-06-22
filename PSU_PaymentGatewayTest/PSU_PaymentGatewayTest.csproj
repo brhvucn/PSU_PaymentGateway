@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PSU_PaymentGateway\PSU_PaymentGateway.csproj" />
+    <ProjectReference Include="..\PSU_PaymentGateway\Webshop.Payment.Api.csproj" />
   </ItemGroup>
 
 </Project>

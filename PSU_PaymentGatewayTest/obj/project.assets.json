@@ -2050,7 +2050,7 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
-      "PSU_PaymentGateway/1.0.0": {
+      "Webshop.Payment.Api/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
@@ -2063,10 +2063,10 @@
           "Swashbuckle.AspNetCore": "5.6.3"
         },
         "compile": {
-          "bin/placeholder/PSU_PaymentGateway.dll": {}
+          "bin/placeholder/Webshop.Payment.Api.dll": {}
         },
         "runtime": {
-          "bin/placeholder/PSU_PaymentGateway.dll": {}
+          "bin/placeholder/Webshop.Payment.Api.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -7061,10 +7061,10 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "PSU_PaymentGateway/1.0.0": {
+    "Webshop.Payment.Api/1.0.0": {
       "type": "project",
-      "path": "../PSU_PaymentGateway/PSU_PaymentGateway.csproj",
-      "msbuildProject": "../PSU_PaymentGateway/PSU_PaymentGateway.csproj"
+      "path": "../PSU_PaymentGateway/Webshop.Payment.Api.csproj",
+      "msbuildProject": "../PSU_PaymentGateway/Webshop.Payment.Api.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7073,7 +7073,7 @@
       "Microsoft.Extensions.Configuration.Abstractions >= 6.0.0",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
       "Moq >= 4.18.1",
-      "PSU_PaymentGateway >= 1.0.0",
+      "Webshop.Payment.Api >= 1.0.0",
       "coverlet.collector >= 3.1.0",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"
@@ -7113,8 +7113,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\PSU_PaymentGateway.csproj": {
-              "projectPath": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\PSU_PaymentGateway.csproj"
+            "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\Webshop.Payment.Api.csproj": {
+              "projectPath": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGateway\\Webshop.Payment.Api.csproj"
             }
           }
         }
