@@ -7087,9 +7087,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGatewayTest\\PSU_PaymentGatewayTest.csproj",
-      "projectName": "PSU_PaymentGatewayTest",
-      "projectPath": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGatewayTest\\PSU_PaymentGatewayTest.csproj",
+      "projectUniqueName": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGatewayTest\\Webshop.Payment.Test.csproj",
+      "projectName": "Webshop.Payment.Test",
+      "projectPath": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGatewayTest\\Webshop.Payment.Test.csproj",
       "packagesPath": "C:\\Users\\brhv\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\brhv\\source\\repos\\PSU_PaymentGateway\\PSU_PaymentGatewayTest\\obj\\",
       "projectStyle": "PackageReference",
